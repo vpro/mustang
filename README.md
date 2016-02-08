@@ -7,7 +7,7 @@ A command-line tool for mustache template, generating outputs from various data 
 
 ## Abstract
 
-Mustang is a command-line tool to generate desired outputs from various data sources (e.g. CSV/JSON file, URL, MySQL, MongoDB), by applying mustache template. 
+Mustang is a command-line tool to generate desired outputs from various data sources (e.g. CSV/JSON file, JSON string, URL, MySQL, MongoDB), by applying mustache template. 
 
 ## Install
 
