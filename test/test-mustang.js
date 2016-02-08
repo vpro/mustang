@@ -72,4 +72,27 @@ describe('mustang', function() {
     mustang.render();
   });
 
+  /**
+   *
+   */
+  it('should accept JSON string', function(done) {
+    var jsonData = (fs.readFileSync(path.join(inputDir, '02.json'), 'utf-8' ).replace(/\n/g, ''));
+    var config = {
+      template: path.join(templateDir, '02.html'),
+      json: jsonData,
+      output: path.join(tmpDir, '02.html')
+    };
+    var mustang = new Mustang(config);
+    mustang.on('end', function() {
+      var output = fs.readFileSync(config.output, 'utf-8');
+      var expected = fs.readFileSync(path.join(outputDir, '02.html'), 'utf-8');
+      expect(output).to.be(expected);
+      done();
+    });
+    mustang.on('error', function(err) {
+      expect().fail();
+    });
+    mustang.render();
+  });
+
 });

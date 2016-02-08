@@ -78,6 +78,12 @@ You can also use stdin for piping.
   &lt;div&gt;3: Thank you!&lt;/div&gt;  
 </pre>
 
+And even a JSON string as input.
+
+<pre>
+  $ mustang -j '{"key":"value"}' -t template.mustache -f json
+</pre>
+
 Adding '-o' option, mustang output is saved to specified file.
 
 <pre>
@@ -138,6 +144,10 @@ You can also set URL-style query string in "-q" option to specify both querying 
 
 
 ## Change History
+
+v0.2.0 (Feb 8, 2016):
+
+* Added support for JSON input string
 
 v0.1.1 (May 19, 2013):
 
