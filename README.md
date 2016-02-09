@@ -78,10 +78,10 @@ You can also use stdin for piping.
   &lt;div&gt;3: Thank you!&lt;/div&gt;  
 </pre>
 
-And even a JSON string as input.
+Or even a JSON string as input.
 
 <pre>
-  $ mustang -j '{"key":"value"}' -t template.mustache -f json
+  $ mustang -j '{"key":"value"}' -t template.mustache
 </pre>
 
 Adding '-o' option, mustang output is saved to specified file.
